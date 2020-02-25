@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="javaS.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body onload="hideText()">
+ 
+  <div class="top">
+    <div class="row d-flex justify-content-between">
+      <div class="col-sm-3 singleNavBody">
+        <a href="index.html" class="button">About Me</a>
+      </div>
+      <div class="col-sm-3 singleNavBody">
+        <a href="MyOnlineCV.html" class="button">My Online CV</a>
+      </div>
+      <div class="col-sm-3 singleNavBody">
+        <a href="#about" class="button">Play zone</a>
+      </div>
+      <div class="col-sm-3 singleNavBody" >
+        <a href="#contact" class="button">News</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="aTitle animatedBorder">
+      <h3>About me</h3>
+    </div>
+    <div>
+
+      <div class="fourTabsContainer row d-flex justify-content-center">
+        <div class="col-md-3 allTabs">
+          <div class="personalTab">
+            <img src="xc.png" alt="me" style="width:100%">
+            <div class="personalContainer">
+              <h3>Felix Crisan</h3>
+              <p class="opacityContainer">Nintendo Compliance Specialist</p>
+              <p>Veteran in the game industry art and experience in training, coordinating and mentoring newbies while
+                managing projects.</p>
+              <p><button class="buttonContainer" onclick="jumpToContact()">Contact</button></p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-8 allTabs">
+          <div class="tab">
+            <img src="laptop.jpg" alt="Car" style="width:100%">
+            <div class="w3-container">
+              <p>Inovation, Expertise, Experience, Impact</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="aTitle animatedBorder">
+        <h3>Short history</h3>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="timeline">
+      <div class="contain left">
+        <div class="content">
+          <h2>2020</h2>
+          <p>Relocating from Bucharest due to my services, experience and knowledge being needed here in Cluj-Napoca,
+            I've continued training and sharing my Compliance skills.</p>
+        </div>
+      </div>
+      <div class="contain right">
+        <div class="content">
+          <h2>2019</h2>
+          <p>I pursued a career in Compliance testing and after just a year I had already coordonated 3 projects,
+            trained a whole department and a small contracted business.</p>
+        </div>
+      </div>
+      <div class="contain left">
+        <div class="content">
+          <h2>2015</h2>
+          <p>Already a veteran tester and a task lead, I've trained several collegues and mentored newbies in various
+            ways of testing, databases, platforms and dev interactions.</p>
+        </div>
+      </div>
+      <div class="contain right">
+        <div class="content">
+          <h2>2012</h2>
+          <p>Started my journey working for Ubisoft as a tester and advanced the ranks fairly easy.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="contactTitle animatedBorder">
+
+
+      <div>
+        <h3>Contact me!</h3>
+      </div>
+
+      <div id="text" name="topText">
+
+        <p name="hiddenMessage"> </p>
+        <a onclick="hideText()" href="javascript::" name="hiddenMessage">&#10005;</a>
+
+      </div>
+
+
+      <div class="contact">
+        <form name="form" onsubmit="send(this,event);displayText();">
+          <label for="fname">First Name</label>
+          <input type="text" name="firstName" maxlength="15" oninput="addCss(), ceScriu()" placeholder="Your name..">
+
+          <label for="lname">Last Name</label>
+          <input type="text" name="lastName" maxlength="15" oninput="addCss(), ceScriu()"
+            placeholder="Your last name..">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" maxlength="25" oninput="addCss(), ceScriu()"
+            placeholder="Your email..">
+          <br>
+          <br>
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <footer class="row d-flex flex-column justify-content-center footerFlex">
+    <a href="#" class="col-md-2 buttonToTop"><i class='fas fa-arrow-circle-up'></i> To the top</a>
+    <div class="col-md-2">
+      <a href="https://www.facebook.com/fleix.folix" target="_blank" class="facebook"><i
+          class='fab fa-facebook'></i></a>
+      <a href="https://www.linkedin.com/in/felix-marian-crisan-035a97a3/" target="_blank" class="linkedin"><i
+          class='fab fa-linkedin'></i></a>
+      <a href="mailto: crisanfelix@yahoo.com" class="google"><i class='fab fa-google'></i></a>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+</body>
+
+</html>
