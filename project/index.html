@@ -12,21 +12,18 @@
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
-<body onload="hideText()">
- 
+<body onload="hideText();">
   <div class="top">
     <div class="row d-flex justify-content-between">
-      <div class="col-sm-3 singleNavBody">
-        <a href="index.html" class="button">About Me</a>
+      <div class="col-sm-4 singleNavBody" onclick="location.href='index.html';" style="cursor: pointer;">
+        About Me
       </div>
-      <div class="col-sm-3 singleNavBody">
-        <a href="MyOnlineCV.html" class="button">My Online CV</a>
+      <div class="col-sm-4 singleNavBody" onclick="location.href='MyOnlineCV.html';" style="cursor: pointer;">
+        My Online CV
       </div>
-      <div class="col-sm-3 singleNavBody">
-        <a href="#about" class="button">Play zone</a>
-      </div>
-      <div class="col-sm-3 singleNavBody" >
-        <a href="#contact" class="button">News</a>
+
+      <div class="col-sm-4 singleNavBody" onclick="location.href='news.html';" style="cursor: pointer;">
+        Miscellaneous
       </div>
     </div>
   </div>
@@ -52,7 +49,6 @@
         </div>
 
 
-
         <div class="col-md-8 allTabs">
           <div class="tab">
             <img src="laptop.jpg" alt="Car" style="width:100%">
@@ -71,10 +67,6 @@
     </div>
 
 
-
-
-
-
     <div class="timeline">
       <div class="contain left">
         <div class="content">
@@ -86,26 +78,24 @@
       <div class="contain right">
         <div class="content">
           <h2>2019</h2>
-          <p>I pursued a career in Compliance testing and after just a year I had already coordonated 3 projects,
-            trained a whole department and a small contracted business.</p>
+          <p>I pursued a career in Compliance testing, and after just a year, I had already coordinated three projects,
+            trained a whole department and small contracting business.</p>
         </div>
       </div>
       <div class="contain left">
         <div class="content">
           <h2>2015</h2>
-          <p>Already a veteran tester and a task lead, I've trained several collegues and mentored newbies in various
-            ways of testing, databases, platforms and dev interactions.</p>
+          <p>Already an experienced tester and a task lead, I've trained several colleagues and mentored newbies in
+            various ways of testing, databases, platforms and dev interactions.</p>
         </div>
       </div>
       <div class="contain right">
         <div class="content">
           <h2>2012</h2>
-          <p>Started my journey working for Ubisoft as a tester and advanced the ranks fairly easy.</p>
+          <p>Started my journey working for Ubisoft as a tester and advanced the ranks reasonably easy.</p>
         </div>
       </div>
     </div>
-
-
 
 
     <div class="contactTitle animatedBorder">
@@ -126,14 +116,15 @@
       <div class="contact">
         <form name="form" onsubmit="send(this,event);displayText();">
           <label for="fname">First Name</label>
-          <input type="text" name="firstName" maxlength="15" oninput="addCss(), ceScriu()" placeholder="Your name..">
+          <input type="text" name="firstName" maxlength="15" oninput="contactFormCSS(), inputTextLimit()"
+            placeholder="Your name..">
 
           <label for="lname">Last Name</label>
-          <input type="text" name="lastName" maxlength="15" oninput="addCss(), ceScriu()"
+          <input type="text" name="lastName" maxlength="15" oninput="contactFormCSS(), inputTextLimit()"
             placeholder="Your last name..">
 
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" maxlength="25" oninput="addCss(), ceScriu()"
+          <input type="email" id="email" name="email" maxlength="25" oninput="contactFormCSS(), inputTextLimit()"
             placeholder="Your email..">
           <br>
           <br>

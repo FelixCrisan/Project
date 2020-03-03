@@ -1,8 +1,5 @@
 "use strict"
 
-function load_home() {
-  document.getElementById("content").innerHTML = '<object class="objectClass" type="text/html" data="menu.html" ></object>';
-}
 
 function jumpToContact() {
   document.querySelector(".contact").scrollIntoView({
@@ -96,7 +93,7 @@ function hideText() {
 
 
 
-function addCss() {
+function contactFormCSS() {
 
   let firstNameInput = document.querySelector("[name='firstName']");
   let lastNameInput = document.querySelector("[name='lastName']");
@@ -158,7 +155,7 @@ function addCss() {
 
 
 
-function ceScriu() {
+function inputTextLimit() {
 
 
   if (div < 15) {

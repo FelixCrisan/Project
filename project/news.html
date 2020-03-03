@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="javaS.js"></script>
+    <script src="degree.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body class="loadWeather" onload="resetTheNumbers();">
+
+    <div class="top">
+        <div class="row d-flex justify-content-between">
+            <div class="col-sm-4 singleNavBody" onclick="location.href='index.html';" style="cursor: pointer;">
+                About Me
+            </div>
+            <div class="col-sm-4 singleNavBody" onclick="location.href='MyOnlineCV.html';" style="cursor: pointer;">
+                My Online CV
+            </div>
+
+            <div class="col-sm-4 singleNavBody" onclick="location.href='news.html';" style="cursor: pointer;">
+                Miscellaneous
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <container class="container">
+
+        <div class="contentTop">
+            <div class="aTitle animatedBorder">
+                <h3>Weather</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 weatherBorder">
+                    <div>
+                        <p>Cluj-Napoca</p>
+                        <p id="showCel"></p>
+                    </div>
+                </div>
+                <div class="col-sm-3 weatherBorder">
+                    <div>
+                        <p>Timisoara</p>
+                        <p id="showCel1"></p>
+                    </div>
+                </div>
+                <div class="col-sm-3 weatherBorder">
+                    <div>
+                        <p>Bucharest</p>
+                        <p id="showCel2"></p>
+                    </div>
+                </div>
+                <div class="col-sm-3 weatherBorder">
+                    <div>
+                        <p>Constanta</p>
+                        <p id="showCel3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contentBody">
+            <div class="row workExperienceContainer">
+                <div class="col-sm-12 workExperienceRightSubTab newsContainer">
+                    <div class="aTitle animatedBorder funFact">
+                        <h3>News</h3>
+                    </div>
+                    <div class="jobRow newsRow">
+                        <h3 id="newsTitle"></h3>
+                        <p id="newsContent"></p>
+                        <input type="submit" onclick="location.href=newsInfoURL" value="Go to source!" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 abilityLeftContainer funFactContainer">
+                    <div class="aTitle animatedBorder funFact">
+                        <h3>Fun Facts</h3>
+                    </div>
+                    <form onsubmit="loadFact(event)">
+                        <div class="jokesRow">
+                            <img id="image-fact"></img>
+                            <p id="random-fact"></p>
+                            <input type="submit" value="Another one!"></input>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row educationContainer">
+
+                <div class="col-sm-6 educationContainerLeft funWithNumbers">
+                    <div class="jobRow">
+                        <h3>Add any text you want and check if it is a palindrome</h3>
+                        <form class="palindromeContainer" onsubmit="checkWordForPalindrome(this,event)">
+                            <input class="inputText" type="text" placeholder="Add some text">
+                            <input type="submit" value="Check if its a palindrome"></input>
+                            <div class="response"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6 educationContainerLeft funWithNumbers funWithNumbersRight">
+                    <div class="jobRow">
+                        <h3>Fun with numbers</h3>
+                        <form class="numbersContainer" onsubmit="addTheNumbers(this,event)">
+                            <input class="inputNumber" type="text" placeholder="Add some numbers">
+                            <input type="submit" value="Add number"></input>
+                            <input type="button" id="resetButton" onclick="resetTheNumbers();"
+                                value="Reset"></input><br>
+                            <input type="button" class="numberGameButton" onclick="showDup(); hideDiv();"
+                                value="Duplicates?"></input>
+                            <input type="button" class="numberGameButton" onclick="showEven(); hideDiv();"
+                                value="Even?"></input>
+                            <input type="button" class="numberGameButton" onclick="showOdd(); hideDiv();"
+                                value="Odd?"></input>
+                        </form>
+                        <div class="numberArray"></div>
+                        <div class="displayNumbers fadeout"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </container>
+    <footer class="row d-flex flex-column justify-content-center footerFlex">
+        <a href="#" class="col-md-2 buttonToTop"><i class='fas fa-arrow-circle-up'></i> To the top</a>
+        <div class="col-md-2">
+            <a href="https://www.facebook.com/fleix.folix" target="_blank" class="facebook"><i
+                    class='fab fa-facebook'></i></a>
+            <a href="https://www.linkedin.com/in/felix-marian-crisan-035a97a3/" target="_blank" class="linkedin"><i
+                    class='fab fa-linkedin'></i></a>
+            <a href="mailto: crisanfelix@yahoo.com" class="google"><i class='fab fa-google'></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
