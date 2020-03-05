@@ -1,6 +1,5 @@
 "use strict"
 
-
 function jumpToContact() {
   document.querySelector(".contact").scrollIntoView({
     behavior: "smooth"

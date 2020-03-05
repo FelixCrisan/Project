@@ -5,53 +5,72 @@ let apiCall4 = 'http://api.openweathermap.org/data/2.5/weather?id=680963&units=m
 let chuckApi = 'https://api.chucknorris.io/jokes/random';
 let newsApi = 'http://newsapi.org/v2/top-headlines?country=ro&category=technology&apiKey=26f1b33a171c404a8f0cc107308c3238';
 
-fetch(apiCall)
-    .then((response) => {
-        return response.json();
-    })
-    .then(weatherCity = (weather) => {
-        console.log(weather);
-        temp = weather.main.temp;
-        console.log(temp);
+window.addEventListener('load', function () {
+    getWeather();
+    getWeather2();
+    getWeather3();
+    getWeather4();
+    setInterval(getWeather, 5000);
+    setInterval(getWeather2, 5000);
+    setInterval(getWeather3, 5000);
+    setInterval(getWeather4, 5000);
+});
 
-        document.querySelector('.loadWeather').addEventListener("mousemove", function () {
-            document.querySelector('#showCel').innerHTML = temp + " &#8451;";
-            // setTimeout(weatherCity, 30000); 
-        });
-    });
+function getWeather() {
+    fetch(apiCall)
+        .then((response) => {
+            return response.json();
+        })
+        .then((weather) => weatherCity(weather));
+}
 
-fetch(apiCall2)
-    .then((response) => {
-        return response.json();
-    })
-    .then((weather) => {
-        temp2 = weather.main.temp;
-        document.querySelector('.loadWeather').addEventListener("mousemove", function () {
-            document.querySelector('#showCel1').innerHTML = temp2 + " &#8451;";
-        });
-    });
 
-fetch(apiCall3)
-    .then((response) => {
-        return response.json();
-    })
-    .then((weather) => {
-        temp3 = weather.main.temp;
-        document.querySelector('.loadWeather').addEventListener("mousemove", function () {
-            document.querySelector('#showCel2').innerHTML = temp3 + " &#8451;";
-        });
-    });
+weatherCity = (weather) => {
+    var temp = weather.main.temp;
+    document.querySelector('#showCel').innerHTML = temp + " &#8451;";
+}
 
-fetch(apiCall4)
-    .then((response) => {
-        return response.json();
-    })
-    .then((weather) => {
-        temp4 = weather.main.temp;
-        document.querySelector('.loadWeather').addEventListener("mousemove", function () {
-            document.querySelector('#showCel3').innerHTML = temp4 + " &#8451;";
-        });
-    });
+function getWeather2() {
+    fetch(apiCall2)
+        .then((response) => {
+            return response.json();
+        })
+        .then((weather) => weatherCity2(weather));
+}
+
+
+weatherCity2 = (weather) => {
+    var temp2 = weather.main.temp;
+    document.querySelector('#showCel2').innerHTML = temp2 + " &#8451;";
+}
+
+function getWeather3() {
+    fetch(apiCall3)
+        .then((response) => {
+            return response.json();
+        })
+        .then((weather) => weatherCity3(weather));
+}
+
+
+weatherCity3 = (weather) => {
+    var temp3 = weather.main.temp;
+    document.querySelector('#showCel3').innerHTML = temp3 + " &#8451;";
+}
+
+function getWeather4() {
+    fetch(apiCall4)
+        .then((response) => {
+            return response.json();
+        })
+        .then((weather) => weatherCity4(weather));
+}
+
+
+weatherCity4 = (weather) => {
+    var temp4 = weather.main.temp;
+    document.querySelector('#showCel4').innerHTML = temp4 + " &#8451;";
+}
 
 fetch(chuckApi)
     .then((response) => {
@@ -107,9 +126,9 @@ function checkWordForPalindrome(word, event) {
     let reverseWord = wordLowKey.split("").reverse().join("");
 
     if (wordLowKey === reverseWord) {
-        document.querySelector('.response').innerText = "It is a palindrome";
+        document.querySelector('.response').innerText = wordValue + ":  is a palindrome";
     } else {
-        document.querySelector('.response').innerText = "It is not a palindrome";
+        document.querySelector('.response').innerText = wordValue + ":  is not a palindrome";
         valid = false;
     }
     document.querySelector('.palindromeContainer').reset();
@@ -184,20 +203,6 @@ function showOdd() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function hideDiv() {
     window.setTimeout(fadeout, 8000);
 }
@@ -206,7 +211,6 @@ function fadeout() {
     document.querySelector('.fadeout').style.opacity = '0';
 
 }
-
 
 
 function resetTheNumbers() {

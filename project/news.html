@@ -50,19 +50,19 @@
                 <div class="col-sm-3 weatherBorder">
                     <div>
                         <p>Timisoara</p>
-                        <p id="showCel1"></p>
-                    </div>
-                </div>
-                <div class="col-sm-3 weatherBorder">
-                    <div>
-                        <p>Bucharest</p>
                         <p id="showCel2"></p>
                     </div>
                 </div>
                 <div class="col-sm-3 weatherBorder">
                     <div>
-                        <p>Constanta</p>
+                        <p>Bucharest</p>
                         <p id="showCel3"></p>
+                    </div>
+                </div>
+                <div class="col-sm-3 weatherBorder">
+                    <div>
+                        <p>Constanta</p>
+                        <p id="showCel4"></p>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div class="col-sm-6 educationContainerLeft funWithNumbers">
                     <div class="jobRow">
                         <h3>Add any text you want and check if it is a palindrome</h3>
-                        <form class="palindromeContainer" onsubmit="checkWordForPalindrome(this,event)">
+                        <form class="palindromeContainer" onsubmit="checkWordForPalindrome(this,event); hideDiv();">
                             <input class="inputText" type="text" placeholder="Add some text">
                             <input type="submit" value="Check if its a palindrome"></input>
                             <div class="response"></div>
@@ -109,7 +109,7 @@
                 <div class="col-sm-6 educationContainerLeft funWithNumbers funWithNumbersRight">
                     <div class="jobRow">
                         <h3>Fun with numbers</h3>
-                        <form class="numbersContainer" onsubmit="addTheNumbers(this,event)">
+                        <form class="numbersContainer" onsubmit="addTheNumbers(this,event);">
                             <input class="inputNumber" type="text" placeholder="Add some numbers">
                             <input type="submit" value="Add number"></input>
                             <input type="button" id="resetButton" onclick="resetTheNumbers();"
