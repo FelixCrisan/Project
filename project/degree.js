@@ -24,7 +24,6 @@ function getWeather() {
         .then((weather) => weatherCity(weather));
 }
 
-
 weatherCity = (weather) => {
     var temp = weather.main.temp;
     document.querySelector('#showCel').innerHTML = temp + " &#8451;";
@@ -37,7 +36,6 @@ function getWeather2() {
         })
         .then((weather) => weatherCity2(weather));
 }
-
 
 weatherCity2 = (weather) => {
     var temp2 = weather.main.temp;
@@ -52,7 +50,6 @@ function getWeather3() {
         .then((weather) => weatherCity3(weather));
 }
 
-
 weatherCity3 = (weather) => {
     var temp3 = weather.main.temp;
     document.querySelector('#showCel3').innerHTML = temp3 + " &#8451;";
@@ -65,7 +62,6 @@ function getWeather4() {
         })
         .then((weather) => weatherCity4(weather));
 }
-
 
 weatherCity4 = (weather) => {
     var temp4 = weather.main.temp;
@@ -116,7 +112,6 @@ fetch(req)
         document.querySelector('#newsContent').innerText = newsInfoDescription;
     });
 
-
 function checkWordForPalindrome(word, event) {
     event.preventDefault();
     let valid = true;
@@ -137,9 +132,6 @@ function checkWordForPalindrome(word, event) {
     }
 };
 
-
-
-
 if (localStorage.getItem('numberArray') == null) {
     var arrayOfNumbers = [];
 } else {
@@ -159,15 +151,12 @@ function addTheNumbers(number, event) {
     } else {
         document.querySelector('.numberArray').innerText = "You need to add a number!";
     }
-
 }
 
 function showDup() {
     document.querySelector('.fadeout').style.opacity = '1';
     for (var i = 0; i <= arrayOfNumbers.length; i++) {
-
         for (var j = i; j <= arrayOfNumbers.length; j++) {
-
             if (i != j && arrayOfNumbers[i] == arrayOfNumbers[j]) {
                 return document.querySelector(".displayNumbers").innerText = "You have a duplicate!";
             } else {
@@ -181,7 +170,6 @@ function showEven() {
     document.querySelector('.fadeout').style.opacity = '1';
     let arrEven = [];
     for (var i = 0; i < arrayOfNumbers.length; i++) {
-
         if (arrayOfNumbers[i] % 2 === 0) {
             arrEven.push(arrayOfNumbers[i]);
             arrEven.sort((x, y) => x - y);
@@ -202,7 +190,6 @@ function showOdd() {
     return document.querySelector(".displayNumbers").innerText = arrOdd;
 }
 
-
 function hideDiv() {
     window.setTimeout(fadeout, 8000);
 }
@@ -211,7 +198,6 @@ function fadeout() {
     document.querySelector('.fadeout').style.opacity = '0';
 
 }
-
 
 function resetTheNumbers() {
     localStorage.removeItem("numberArray");
